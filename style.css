@@ -64,8 +64,8 @@ body{
 @media(max-width: 668px){
     .review-container{
         text-align: center;
-        width: vw;
-        margin: 0 auto;
+        margin-top: 30px;
+       width: 80%;
         border: 1px solid #fff;
         padding: 30px 15px;
         background-color: #fff;
