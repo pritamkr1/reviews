@@ -71,37 +71,9 @@ preBtn.addEventListener('click', function(){
      showFirstReview();
  })
 randomBtn.addEventListener('click', function(){
-    firstReview = Math.floor(Math.random()*personReviews.length)
-    showFirstReview()
-})
-
-/*let firstReview = 0;
-window.addEventListener('DOMContentLoaded', function(){
-    showPersonReview();
-})
-
-
-function showPersonReview(){
-    var showTestimonial = personReviews[firstReview];
-    console.log(showTestimonial);
-    personImg.src = showTestimonial.img
-    personName.textContent = showTestimonial.name;
-    personJob.textContent = showTestimonial.job;
-    personText.textContent = showTestimonial.text;
-}
-
-
-preBtn.addEventListener('click', function(){
-    firstReview--;
-    if(firstReview < 0){
-        firstReview = personReviews.length-1;
-    }
-    showPersonReview()
+    firstReview = Math.floor(Math.random()*personReviews.length);
+    //var randomReview = firstReview;
+   // console.log(randomReview);
+    showFirstReview();
 });
- nextBtn.addEventListener('click', function(){
-     firstReview++;
-     if(firstReview > personReviews.length-1){
-         firstReview = 0;
-     }
-     showPersonReview()
- })*/
+
