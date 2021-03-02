@@ -61,6 +61,13 @@ body{
     margin-top: 10px;
 }
 
+#random{
+    margin-top: 10px;
+    outline: 0;
+    padding: 3px 10px;
+    cursor: pointer;
+}
+
 @media(max-width: 668px){
     .review-container{
         text-align: center;

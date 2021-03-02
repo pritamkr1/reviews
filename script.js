@@ -41,9 +41,41 @@ const personText = document.querySelector('#text');
 //selecting buttons
 const preBtn = document.querySelector('#pre-btn');
 const nextBtn = document.querySelector('#next-btn');
+const randomBtn = document.querySelector('#random');
 
+let firstReview = 0 ;
 
-let firstReview = 0;
+window.addEventListener('DOMContentLoaded', function(){
+    showFirstReview();
+})
+
+function showFirstReview(){
+    var showTestimonial = personReviews[firstReview];
+    personImg.src = showTestimonial.img
+    personName.textContent = showTestimonial.name;
+    personJob.textContent = showTestimonial.job;
+    personText.textContent = showTestimonial.text;
+}
+preBtn.addEventListener('click', function(){
+    firstReview--;
+    if(firstReview < 0){
+        firstReview = personReviews.length-1;
+    }
+    showFirstReview();
+});
+ nextBtn.addEventListener('click', function(){
+     firstReview++;
+     if(firstReview > personReviews.length-1){
+         firstReview = 0;
+     }
+     showFirstReview();
+ })
+randomBtn.addEventListener('click', function(){
+    firstReview = Math.floor(Math.random()*personReviews.length)
+    showFirstReview()
+})
+
+/*let firstReview = 0;
 window.addEventListener('DOMContentLoaded', function(){
     showPersonReview();
 })
@@ -72,4 +104,4 @@ preBtn.addEventListener('click', function(){
          firstReview = 0;
      }
      showPersonReview()
- })
+ })*/
